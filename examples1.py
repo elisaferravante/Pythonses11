@@ -15,6 +15,9 @@ c="abc"
 print(a,b,c)
 
 
+name = input("enter your name: ")
+print(f"hello, {name}!")
+
 #find 3 letter words starting with b inside file
 def find_words(filename): #defining our function
     """
