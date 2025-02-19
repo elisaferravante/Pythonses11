@@ -47,19 +47,33 @@ print(f"Prime numbers: {get_prime_numbers(numbers)}")
 
 
 
-#find 3 letter words starting with b inside file
-def find_words(filename): #defining our function
-    """
-    prints 3 letter words starting with b from a file
-    :param filename: the name of file
-    :return: none(nothing)
-    """
-    with open(filename) as f:
-        for line in f:
-            words = line.split()
-            for word in words:
-                if len(word) == 3 and word[0] in "bB":
-                    print(word)
+#functions
+def is_prime(num):
+    """Check if a number is prime."""
+    if num <= 1:
+        return False  # 0 and 1 are not prime numbers
 
-find_words("input.txt")
+    # Check divisibility from 2 to the square root of the number
+    for i in range(2, int(num**0.5) + 1):
+        if num % i == 0:
+            return False  # If divisible by any number, it's not prime
 
+    return True  # If no divisors found, it's prime
+
+# Example usage
+print(is_prime(17))  # True
+print(is_prime(10))  # False
+
+#functions pt2
+def greet(name):
+    """This function greets the user by name."""
+    print(f"Hello, {name}!")
+
+# Function Call
+greet("Elisa")
+#practice functions pt2
+def greet(name):
+    """This function greets user by name."""
+    print(f"Hello, {name}!")
+
+greet("eli")
