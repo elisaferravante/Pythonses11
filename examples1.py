@@ -18,6 +18,13 @@ print(a,b,c)
 name = input("enter your name: ")
 print(f"hello, {name}!")
 
+number1 = int(input("give me one number"))
+number2 = int(input("give me another number"))
+print("sum:",number1 + number2)
+print("difference:", number1 - number2)
+print("product:", number1 * number2)
+print("quotient:", number1 / number2)
+
 #find 3 letter words starting with b inside file
 def find_words(filename): #defining our function
     """
