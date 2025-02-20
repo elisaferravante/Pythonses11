@@ -77,3 +77,13 @@ def greet(name):
     print(f"Hello, {name}!")
 
 greet("eli")
+
+
+#read a file
+try:
+    with open("example.txt", "r") as file:
+        for line in file:
+            print(line.strip())
+except FileNotFoundError:
+    print("The file doesn't exist")
+
