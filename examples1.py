@@ -87,3 +87,28 @@ try:
 except FileNotFoundError:
     print("The file doesn't exist")
 
+#read 'file exercise 1' (using read function r)
+try:
+    with open("file exercise 1", "r") as file:
+        for line in file:
+            print(line.strip())
+except FileNotFoundError:
+    print("file doesn't exist")
+
+#edit 'file exercise 1' without deleting content in file (using a)
+try:
+    with open("file exercise 1", "a") as file:
+        file.write("Hey i am editing my file! What's up.\n")
+        file.write("I wish you a wonderful day!.\n")
+    print("file written successfully")
+except Exception as e:
+    print(f"an error occurred: {e}")
+
+#edit 'file exercise 1' by replacing content in file (using w)
+try:
+    with open("file exercise 1", "w") as file:
+        file.write("Hey i am editing my file! What's up.\n")
+        file.write("I wish you a wonderful day!.\n")
+    print("file written successfully")
+except Exception as e:
+    print(f"an error occurred: {e}")
